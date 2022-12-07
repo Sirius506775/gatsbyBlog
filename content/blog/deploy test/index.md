@@ -1,7 +1,7 @@
 ---
 title: deploy test
 
-date: "2022-11-24T13:17:32.169Z"
+date: "2022-11-24"
 
 description: 블로그 배포 후, deploy 테스트를 실시합니다.
 ---

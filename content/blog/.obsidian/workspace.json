@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e6c88db02069d432",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pure Function(순수 함수).md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "deploy test/index.md",
+                "file": "Pure Function(순수 함수).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "deploy test/index.md",
+                "file": "Pure Function(순수 함수).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "deploy test/index.md"
+                "file": "Pure Function(순수 함수).md"
               }
             }
           }
@@ -136,11 +149,12 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "0a9063eb491ed3ef",
+  "active": "e6c88db02069d432",
   "lastOpenFiles": [
-    "hello-world/index.md",
-    "deploy test/index.md",
     "new-beginnings/index.md",
+    "deploy test/index.md",
+    "Pure Function(순수 함수).md",
+    "hello-world/index.md",
     "my-second-post/index.md"
   ]
 }
