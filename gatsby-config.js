@@ -12,12 +12,12 @@ module.exports = {
     title: `DongHeon's Develog`,
     author: {
       name: `DoneHeon Lee`,
-      summary: `who lives and works in Seoul building useful things.`,
+      summary: `who lives and works in SouthKorea.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://sirius506775.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      github: `sirius506775`,
     },
   },
   plugins: [
