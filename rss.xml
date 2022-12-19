@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://sirius506775.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 19 Dec 2022 05:52:37 GMT</lastBuildDate><item><title><![CDATA[React - input 태그 사용법]]></title><description><![CDATA[React에서 input태그를 사용하는 방법 input태그는 사용자가 입력을 해도 컴포넌트가 변하지 않습니다. re-rendering이 일어나지 않는다는 말입니다. 1. useRef를 사용하는 방법 (권장하지 않음) id를 사용하지 않고 대신 ref…]]></description><link>https://sirius506775.github.io/React - input 태그 사용법/</link><guid isPermaLink="false">https://sirius506775.github.io/React - input 태그 사용법/</guid><pubDate>Mon, 19 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h5&gt;React에서 input태그를 사용하는 방법&lt;/h5&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://sirius506775.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 19 Dec 2022 06:08:03 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[index.js 파일이 가장 먼저 실행되는 파일이다. 
+React-dom이라는 패키지로부터 reactDOM Object를 가져온다 pakage.json를 살펴보면
+로컬에 설치한 dependencies를 확인할 수 있다. ![[Pasted image…]]></description><link>https://sirius506775.github.io/Udemy React/React - Day1/</link><guid isPermaLink="false">https://sirius506775.github.io/Udemy React/React - Day1/</guid><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;#react&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;index.js&lt;/strong&gt; 파일이 가장 먼저 실행되는 파일이다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;import ReactDOM from &apos;react-dom/client&apos;;&lt;/code&gt;
+React-dom이라는 패키지로부터 reactDOM Object를 가져온다&lt;/p&gt;
+&lt;p&gt;pakage.json를 살펴보면
+로컬에 설치한 dependencies를 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20221219150604.png]]&lt;/p&gt;
+&lt;p&gt;엄밀히 말하면 별개의 패키지로 나누어 각기 다른 역할을 하지만 두 가지 React 라이브러리에 의존한다.&lt;/p&gt;
+&lt;p&gt;index.js처럼 말이다.
+해당 라이브러리가 제공하는 기능을 사용할 수 있는 것이다.&lt;/p&gt;
+&lt;p&gt;이게 현대 JavaScript의 일반적인 작동 방식이다.&lt;/p&gt;
+&lt;p&gt;React-dom이라는 패키지로부터 reactDOM Object를 가져와서 creatRoot 메소드를 호출한다.&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20221219150631.png]]
+이로 인해 주요 엔트리 포인트가 생성된다.&lt;/p&gt;
+&lt;p&gt;리액트로 구축될 UI에 대한 주요 hook을 말한다.&lt;/p&gt;
+&lt;h3&gt;createRoot 메소드의 역할 :&lt;/h3&gt;
+&lt;p&gt;리액트로 구축할 UI를 리액프 어플리케이션이 불러온 웹페이지 상에서 어디에 배치해야하는지 리액트에게 알려주는 메소드이다.
+이 메소드로 인해 public 폴더에 있는 index.html로 이동하게된다.&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20221219150641.png]]&lt;/p&gt;
+&lt;p&gt;단일 html파일로 브라우저가 불러오는 파일이다.&lt;/p&gt;
+&lt;p&gt;리액트 어플리케이션 전체에서 사용하는 유일한 html 파일이다.
+단일 페이지 어플리케이션, SPA라고 불리는 부분이다.&lt;/p&gt;
+&lt;p&gt;리액트로 다루는 웹페이지와 UI에서 일어나는 모든 변경사항들을 다룬다.&lt;/p&gt;
+&lt;p&gt;엔트리 포인트인 이 단일 HTML 파일은 React가 주도하는 UI가 렌더링되야하는 위치이다.&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20221219150648.png]]&lt;/p&gt;
+&lt;p&gt;우리는 이 div태그에 react로 구축할 UI를 추가한다.&lt;/p&gt;
+&lt;p&gt;React를 기반으로 하는 사용자 인터페이스가 렌더링되어야 하는 건 이 div 태그입니다&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; ReactDOM &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-dom/client&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  
+
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./index.css&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; App &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./App&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  
+&lt;span class=&quot;token comment&quot;&gt;//root 객체를 상수나 변수로 저장&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; root &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;createRoot&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//메인 react 어플리케이션이 렌더링되는 부분이다.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//root라는 id를 갖고 있는 dom이 루트라는 것을 react에게 알려준다.&lt;/span&gt;
+
+
+root&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;App &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//root객체에서 render메소드를 호출&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;그 다음, root객체에서 render메소드를 호출해서 이 div 태그에 뭘 렌더링해야 하는지 알린다.&lt;/p&gt;
+&lt;p&gt;그 다음 ReactDOM에게 렌더링하고 싶은 게 있다고 알린다.&lt;/p&gt;
+&lt;p&gt;div 태그에 들어갈 콘텐츠는 App이다.
+&lt;code class=&quot;language-text&quot;&gt;import App from &apos;./App&apos;;&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React - input 태그 사용법]]></title><description><![CDATA[React에서 input태그를 사용하는 방법 input태그는 사용자가 입력을 해도 컴포넌트가 변하지 않습니다. re-rendering이 일어나지 않는다는 말입니다. 1. useRef를 사용하는 방법 (권장하지 않음) id를 사용하지 않고 대신 ref…]]></description><link>https://sirius506775.github.io/React - input 태그 사용법/</link><guid isPermaLink="false">https://sirius506775.github.io/React - input 태그 사용법/</guid><pubDate>Mon, 19 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h5&gt;React에서 input태그를 사용하는 방법&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;input태그는 사용자가 입력을 해도 컴포넌트가 변하지 않습니다. re-rendering이 일어나지 않는다는 말입니다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -67,7 +115,44 @@
 &lt;li&gt;컴포넌트의 state가 변경이 되었을 때&lt;/li&gt;
 &lt;li&gt;props가 변경이 되었을 때&lt;/li&gt;
 &lt;li&gt;상위컴포넌트가 변경이 되어서 re-render가 되면, 하위 컴포넌트도 re-render를 한다.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Pure Function]]></title><description><![CDATA[Pure Function(순수함수 <-> Impure Function) 순수함수의 조건 동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x) 함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x) 1-…]]></description><link>https://sirius506775.github.io/Pure Function(순수 함수)/</link><guid isPermaLink="false">https://sirius506775.github.io/Pure Function(순수 함수)/</guid><pubDate>Wed, 07 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Pure Function(순수함수 &amp;#x3C;-&gt; Impure Function)&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React - UseState()]]></title><description><![CDATA[react는 Dom이 아닌 JavaScript…]]></description><link>https://sirius506775.github.io/React - 구조 디자인 매뉴얼/</link><guid isPermaLink="false">https://sirius506775.github.io/React - 구조 디자인 매뉴얼/</guid><pubDate>Mon, 19 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;react는 Dom이 아닌 JavaScript를 중심으로 생각한다.&lt;/h2&gt;
+&lt;p&gt;=&gt; 이 패러다임을 받아들여야한다.&lt;/p&gt;
+&lt;h5&gt;더 효과적인 컴포넌트를 구성하는 방법&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;아토믹 디자인은 기획 설계 시 적용하고, 실제 구현단계에서는 적용하기 어렵다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;때문에 구현 단계에서는 반대로 위에서 부터 아래로 뿌려주는 형태로 개발한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;컴포넌트를 외부로 많이 뺀다고 해서 재사용성이 좋지 않았다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이후에는 모듈이라는 단위로 빼기 시작한다.&lt;/p&gt;
+&lt;h5&gt;설계 원칙&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;확장성과 재사용성 있는 코드&lt;/li&gt;
+&lt;li&gt;topic에 따른 코드 분리와 단일 책임을 가지는 컴포넌트를 만들어야함&lt;/li&gt;
+&lt;li&gt;외부에 제어를 위임시키는것을 고려하자.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5&gt;리액트에서 배열 선언하는 2가지 방법&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;컴포넌트 안에 배열을 선언하는 방법&lt;/li&gt;
+&lt;li&gt;컴포넌트 바깥에 배열을 선언하는 방법&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;방법을 선택하는 기준
+&lt;ul&gt;
+&lt;li&gt;컴포넌트 안에 있는 변수나 상수를 써야하는 경우는 배열을 안쪽에 선언하는 것이 좋다.
+( = 클로저)&lt;/li&gt;
+&lt;li&gt;하지만 독립적이고 고정적인 데이터는 컴포넌트 바깥에 선언하는 것이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;리액트의 컴포넌트가 언제 다시 뿌려지는가&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;컴포넌트 안에 있는 state(상태)가 변경되었을 때&lt;/li&gt;
+&lt;li&gt;컴포넌트가 여러 개인 구조상에서 상위 컴포넌트가 변경되어서 re-rendering이 되면 하위 컴포넌트들도 리렌더링을 한다.&lt;/li&gt;
+&lt;li&gt;props가 변경이 되었을 때(내가 변수에 값을 바꾸는 것이 아니다 xxx )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;우리는 효율적인 재사용과 안정적인 컴포넌트를 만들기 위해 Side Effect가 존재하지 않는 컴포넌트로 만들 필요가 있다. =&gt; 순수 컴포넌트 지향&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Pure Function]]></title><description><![CDATA[Pure Function(순수함수 <-> Impure Function) 순수함수의 조건 동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x) 함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x) 1-…]]></description><link>https://sirius506775.github.io/Pure Function(순수 함수)/</link><guid isPermaLink="false">https://sirius506775.github.io/Pure Function(순수 함수)/</guid><pubDate>Wed, 07 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Pure Function(순수함수 &amp;#x3C;-&gt; Impure Function)&lt;/p&gt;
 &lt;p&gt;순수함수의 조건&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x)&lt;/li&gt;
