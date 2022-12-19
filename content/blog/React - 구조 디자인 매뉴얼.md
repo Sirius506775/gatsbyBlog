@@ -1,7 +1,7 @@
 ---
 title: React - UseState()
 date: "2022-12-19"
-description: react는 Dom이 아닌 JavaScript를 중심으로 생각한다. 우리는 이 패러다임을 받아들여야한다. 
+description: react는 Dom이 아닌 JavaScript를 중심으로 생각한다. 우리는 git 이 패러다임을 받아들여야한다. 
 ---
 
 ## react는 Dom이 아닌 JavaScript를 중심으로 생각한다.
