@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md",
+                "file": "React - 구조 디자인 매뉴얼.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md",
+                "file": "React - 구조 디자인 매뉴얼.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md",
+                "file": "React - 구조 디자인 매뉴얼.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md"
+                "file": "React - 구조 디자인 매뉴얼.md"
               }
             }
           }
@@ -154,11 +154,11 @@
   },
   "active": "7ac5e6f5a0dabd87",
   "lastOpenFiles": [
-    "Pure Function(순수 함수).md",
-    "React - 구조 디자인 매뉴얼.md",
     "React - input 태그 사용법.md",
-    "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md",
     "React - UseState().md",
+    "React - 구조 디자인 매뉴얼.md",
+    "Pure Function(순수 함수).md",
+    "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md",
     "Udemy React/Pasted image 20221219150604.png",
     "Udemy React/React - Day1.md",
     "Pasted image 20220814194322.png.md",
