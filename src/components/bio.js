@@ -37,17 +37,18 @@ const Bio = () => {
         layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/profile_img2.webp"
-        width={100}
-        height={100}
+        width={50}
+        height={50}
         quality={95}
         alt="Profile picture"
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
+          Hello I'm <strong>{author.name}</strong> {author?.summary || null}
           {` `}
-          <a href={`https://github.com/${social?.twitter || ``}`}>
-            You should follow them on GitHub
+          <br/>
+          <a href={`https://github.com/${social?.github || ``}`}>
+            You can check my activity on GitHub
           </a>
         </p>
       )}

@@ -12,7 +12,7 @@ module.exports = {
     title: `DongHeon's Develog`,
     author: {
       name: `DoneHeon Lee`,
-      summary: `who lives and works in SouthKorea.`,
+        summary: `who lives and works in South Korea.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://sirius506775.github.io/`,
@@ -118,7 +118,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon-32x32.png`, // This path is relative to the root of the site.
       },
     },
   ],
