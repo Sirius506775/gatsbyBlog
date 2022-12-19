@@ -8,14 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0a9063eb491ed3ef",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
             "id": "d98e918822d7fff6",
             "type": "leaf",
             "state": {
@@ -33,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pure Function(순수 함수).md",
+                "file": "React - UseState().md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4881f6d4889a3927",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "React - 구조 디자인 매뉴얼.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -106,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "React - UseState().md",
+                "file": "React - 구조 디자인 매뉴얼.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "React - UseState().md",
+                "file": "React - 구조 디자인 매뉴얼.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "React - UseState().md"
+                "file": "React - 구조 디자인 매뉴얼.md"
               }
             }
           }
@@ -157,11 +161,12 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "d98e918822d7fff6",
+  "active": "4881f6d4889a3927",
   "lastOpenFiles": [
-    "React - input 태그 사용법.md",
     "React - UseState().md",
+    "React - 구조 디자인 매뉴얼.md",
     "Pure Function(순수 함수).md",
+    "React - input 태그 사용법.md",
     "new-beginnings/index.md",
     "hello-world/index.md",
     "my-second-post/index.md",
