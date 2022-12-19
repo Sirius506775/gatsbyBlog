@@ -1,4 +1,11 @@
-	#react
+---
+title: Udemy React Guide 01 - createRoot(), App.js
+date: "2022-12-19"
+description: createRoot() 는 리액트로 구축할 UI를 리액프 어플리케이션이 불러온 웹페이지 상에서 어디에 배치해야하는지 리액트에게 알려주는 메소드이다. 
+이 메소드로 인해 public 폴더에 있는 index.html로 이동하게된다. 
+---
+
+#react
 
 **index.js** 파일이 가장 먼저 실행되는 파일이다.
 
@@ -26,7 +33,7 @@ React-dom이라는 패키지로부터 reactDOM Object를 가져와서 creatRoot 
 
 ### createRoot 메소드의 역할 :
 
-리액트로 구축할 UI를 리액프 어플리케이션이 불러온 웹페이지 상에서 어디에 배치해야하는지 리액트에게 알려주는 메소드이다. 
+createRoot() 는 리액트로 구축할 UI를 리액프 어플리케이션이 불러온 웹페이지 상에서 어디에 배치해야하는지 리액트에게 알려주는 메소드이다. 
 이 메소드로 인해 public 폴더에 있는 index.html로 이동하게된다. 
 
 ![[Pasted image 20221219150641.png]]

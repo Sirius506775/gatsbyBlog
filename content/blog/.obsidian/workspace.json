@@ -11,8 +11,12 @@
             "id": "7ac5e6f5a0dabd87",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -27,16 +31,11 @@
             "id": "95d896ad9d216228",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Udemy React/React - Day1.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -102,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Udemy React/React - Day1.md",
+                "file": "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Udemy React/React - Day1.md",
+                "file": "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Udemy React/React - Day1.md"
+                "file": "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md"
               }
             }
           }
@@ -155,13 +154,13 @@
   },
   "active": "5685cb9d2492f9bc",
   "lastOpenFiles": [
+    "Pure Function(순수 함수).md",
+    "React - UseState().md",
     "Udemy React/Pasted image 20221219150604.png",
     "Udemy React/React - Day1.md",
     "Pasted image 20220814194322.png.md",
     "Pasted image 20221219150540.png",
-    "React - UseState().md",
     "React - 구조 디자인 매뉴얼.md",
-    "Pure Function(순수 함수).md",
     "React - input 태그 사용법.md",
     "new-beginnings/index.md",
     "hello-world/index.md"
