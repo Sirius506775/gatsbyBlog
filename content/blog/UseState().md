@@ -1,5 +1,5 @@
 ---
-title: React - UseState()
+title: UseState()
 date: "2022-12-19"
 description: 리액트의 컴포넌트가 re-rendering 하는 조건 중 하나는 컴포넌트 안에 있는 state가 변경되었을 경우입니다. 
 ---

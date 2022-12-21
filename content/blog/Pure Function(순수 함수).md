@@ -1,7 +1,8 @@
 ---
 title: Pure Function
 date: "2022-12-07"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: 순수함수의 조건은 아래와 같이 2가지로 볼 수 있다. 1. 동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x)
+2. 함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x)
 ---
 
 

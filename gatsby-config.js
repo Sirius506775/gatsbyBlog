@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `DongHeon's Develog`,
+    title: `DoneHeon's Develog`,
     author: {
       name: `DoneHeon Lee`,
-        summary: `who lives and works in South Korea.`,
+        summary: `마라톤을 사랑하며, 문제 해결과정을 탐구하길 좋아하는 사람  `,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://sirius506775.github.io/`,
