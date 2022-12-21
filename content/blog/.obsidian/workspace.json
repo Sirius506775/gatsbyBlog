@@ -25,19 +25,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pure Function(순수 함수).md",
+                "file": "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "2e14b623d5dc0051",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.1.8"
               }
             }
           },
@@ -58,7 +48,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -124,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pure Function(순수 함수).md",
+                "file": "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pure Function(순수 함수).md",
+                "file": "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pure Function(순수 함수).md"
+                "file": "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md"
               }
             }
           }
@@ -185,13 +175,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2e14b623d5dc0051",
+  "active": "7f7467c4186cc620",
   "lastOpenFiles": [
+    "UseState().md",
     "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md",
+    "React 구조 디자인 매뉴얼.md",
     "React에서의 input 태그 사용법.md",
     "Pure Function(순수 함수).md",
-    "React 구조 디자인 매뉴얼.md",
-    "UseState().md",
     "Udemy React/Udemy React Guide 01 - createRoot(), App.js.md",
     "Udemy React/Pasted image 20221219150604.png",
     "Udemy React/React - Day1.md",

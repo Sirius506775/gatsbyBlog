@@ -1,6 +1,6 @@
 ---
 title: React에서의 input 태그 사용법
-date: "2022-12-19"
+date: "2022-12-21"
 description: input태그는 사용자가 입력을 해도 컴포넌트가 변하지 않습니다. re-rendering이 일어나지 않는다는 말입니다.
 ---
 
