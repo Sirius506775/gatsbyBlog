@@ -1,40 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://sirius506775.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Dec 2022 07:32:17 GMT</lastBuildDate><item><title><![CDATA[Pure Function]]></title><description><![CDATA[Pure Function(순수함수 <-> Impure Function) 순수함수의 조건 동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x) 함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x) 1-…]]></description><link>https://sirius506775.github.io/Pure Function(순수 함수)/</link><guid isPermaLink="false">https://sirius506775.github.io/Pure Function(순수 함수)/</guid><pubDate>Wed, 07 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Pure Function(순수함수 &amp;#x3C;-&gt; Impure Function)&lt;/p&gt;
-&lt;p&gt;순수함수의 조건&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x)&lt;/li&gt;
-&lt;li&gt;함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1-1. 함수의 인자가 아닌 외부 변수를 사용하지 않아야 합니다. (상수는 OK)&lt;br&gt;
-1-2. 함수 내부에서 Math.random()이나 file I/O등 호출때마다 달라지는 값이 없어야 합니다.&lt;br&gt;
-2-1. 외부 변수의 값을 수정하지 않아야 합니다.&lt;br&gt;
-2-2. 인자로 넘어온 Object나 Array, Date와 같은 값들의 필드를 내부에서 변경하지 않아야 합니다.&lt;br&gt;
-2-2. 콘솔, 네트워크, 기타 DOM API등을 사용하지 않아야 합니다.&lt;br&gt;
-2-3. try ~ catch등 같은 에러 처리 로직을 사용하지 않아야 한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;예측 가능&lt;/strong&gt;: 동일한 입력에 대해 예측 가능한 output을 생성한다.&lt;br&gt;
-&lt;strong&gt;가독성&lt;/strong&gt;: 독립된 실행 단위를 가지므로 누구나 그 목적을 완전히 이해할 수 있다.&lt;br&gt;
-&lt;strong&gt;재사용 가능&lt;/strong&gt;: 함수와 호출자의 동작을 변경하지 않고 코드의 여러 위치에서 함수를 재사용할 수 있다.&lt;br&gt;
-테스트 가능**: 독립적인 단위로 테스트 가능하다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;=&gt; Pure function은 항상 같은 value를 return 하기 때문에 테스트하기 용이하다.&lt;/p&gt;
-&lt;p&gt;Pure Function always return same values.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;My Name is &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;name&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token function&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Heon&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// returns &apos;My Name is Heon&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;``
-&lt;strong&gt;순수함수 + 순수함수 = 순수함수&lt;/strong&gt; 가 되므로 순수함수로 조립된 최종값만 부수효과가 있는 함수를 통해 처리하고, 다시 그 결과를 순수함수를 통해 조립을 하는 방식으로 개발을 하면 우리 목적을 달성할 수 있게 된다.
-3&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h2&gt;함수형 프로그래밍의 개념도&lt;/h2&gt;
-&lt;p&gt;Input =&gt; &lt;strong&gt;(순수 함수 =&gt; 순수 함수 =&gt; 순수 함수 =&gt; 순수 함수)&lt;/strong&gt; =&gt; 부수 효과 =&gt; Output1&lt;/p&gt;
-&lt;p&gt;Output1 =&gt; Input =&gt; &lt;strong&gt;(순수 함수 =&gt; 순수 함수)&lt;/strong&gt; =&gt; 부수 효과 =&gt; Output2&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;그래서 이렇게 순수함수를 통해 데이터가 지나가는 경우에는 외부에 영향을 주지 않기 때문에 무한한 조립의 가지수를 다 테스트하지 않고 각 함수만 잘 동작한다면 저 구간은 문제 없을 거라는 것을 확신할 수 있게 됩니다. 이렇게 &lt;strong&gt;값이 변하지 않는 상태를 유지하는 것을 불변성&lt;/strong&gt;(Immutablilty)이라고 합니다.&lt;/p&gt;
-&lt;p&gt;#FuntionalProgramming&lt;/p&gt;</content:encoded></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://sirius506775.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Dec 2022 07:40:13 GMT</lastBuildDate><item><title><![CDATA[함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관]]></title><description><![CDATA[- let보다는 가급적 const를 사용 함수형 프로그래밍의 시작은 불변성 유지이다.
+let사용을 줄이고 const로 개발하는 습관을 권장한다.
+수정된 값이 필요할 때에는 새로운 변수를 만드는 것이 용이하다. Do Not This: Do This…]]></description><link>https://sirius506775.github.io/함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관/</link><guid isPermaLink="false">https://sirius506775.github.io/함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;- let보다는 가급적 const를 사용&lt;/h4&gt;
+&lt;p&gt;함수형 프로그래밍의 시작은 불변성 유지이다.
+let사용을 줄이고 const로 개발하는 습관을 권장한다.
+수정된 값이 필요할 때에는 새로운 변수를 만드는 것이 용이하다.&lt;/p&gt;
+&lt;p&gt;Do Not This:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; foo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+foo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;somthing&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;foo&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Do This:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; foo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; new_foo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;somthing&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;foo&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;- Array, Date의 Mutaion Method를 가급적 지양&lt;/h4&gt;
+&lt;p&gt;push, pop, shift, sort, reverse 등 객체를 변하는 Method를 가급적 spread operator로 대체하거나 값을 복사해서 사용 권장!!&lt;/p&gt;
+&lt;p&gt;Do Not This:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;typescript&quot;&gt;&lt;pre class=&quot;language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;example&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;arr&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; date&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;Date&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  date&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setMonth&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Do This:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;typescript&quot;&gt;&lt;pre class=&quot;language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;example&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;arr&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; date&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;Date&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; new_arr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;arr&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; sorted_new_arr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;new_arr&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; new_date &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;date&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setMonth&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;new_arr&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; new_date&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;- 가급적 Object의 필드에 대입 연산자 사용 지양&lt;/h4&gt;
+&lt;p&gt;** 가급적&apos; 이라는 의미를 잘 생각하고 값을 변경할 때에는 항상 scope에 대해 생각하며 코딩**&lt;/p&gt;
+&lt;p&gt;본말을 전도해서 극단적으로 let을 쓰지 않고 Array push를 쓰지 않고 Object의 값을 변경할때 항상 복사 x&lt;/p&gt;
+&lt;p&gt;값을 변경할때 변수가 선언된 위치에서 부터 3~7줄 범위내에서 수정되며 선언된 함수의 scope를 벗어나지 않는 값이라면 복사해서 값을 옮기는 행위는 리소스 낭비이다..&lt;/p&gt;
+&lt;p&gt;Do Not This:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;typescript&quot;&gt;&lt;pre class=&quot;language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;example&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;Object&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;foo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Do This:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;typescript&quot;&gt;&lt;pre class=&quot;language-typescript&quot;&gt;&lt;code class=&quot;language-typescript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;example&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;Object&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; foo&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;- pure function과 effect를 확실하게 구분해서 작성&lt;/h4&gt;
+&lt;p&gt;일부만 Pure하면 Pure한게 아니다. 예를 들어 const와 spread operator를 통해서 불변성을 지키는듯 보이는 코드들 안에 부수효과를 유발하는 코드가 있다면 pure하지 않은 것이다. 분리할 수 있는 방법을 고민하라. pure function은 크지 않아도 좋다.&lt;/p&gt;
+&lt;h4&gt;- 그래도 요구사항대로 구현해서 코드가 작동하는게 제일이다!&lt;/h4&gt;
+&lt;p&gt;위javascript는 멀티 패러다임 랭귀지이기에 함수형을 쓰던 객체지향으로 개발하던 잘 돌아가기만 한다면 일단 OK&lt;/p&gt;
+&lt;p&gt;차츰차츰 각 영역의 좋은점만 찾아서 영리하게 잘 이용할 수 있어야함&lt;/p&gt;
+&lt;p&gt;=&gt;&gt;&gt;&gt;&gt;&lt;/p&gt;
+&lt;p&gt;** 본질을 잊지말자 **&lt;/p&gt;
+&lt;p&gt;우리가 함수형 프로그래밍을 해야 하는 이유는 &lt;strong&gt;깔끔하고 예측가능하며 테스트 하기 쉽고 안전한 코드&lt;/strong&gt;를 만들기 위해서이며&lt;br&gt;
+javascript가 태생이 &lt;strong&gt;완전한 객체지향도 완전한 함수형도 아닌 밸런스를 가지고 있는 언어&lt;/strong&gt;이기 때문이다. !!&lt;/p&gt;</content:encoded></item></channel></rss>
