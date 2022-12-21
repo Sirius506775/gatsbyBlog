@@ -25,9 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md",
+                "file": "Pure Function(순수 함수).md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "2e14b623d5dc0051",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.1.8"
               }
             }
           },
@@ -48,7 +58,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -114,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md",
+                "file": "Pure Function(순수 함수).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md",
+                "file": "Pure Function(순수 함수).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +164,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md"
+                "file": "Pure Function(순수 함수).md"
               }
             }
           }
@@ -165,10 +175,20 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "7f7467c4186cc620",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "2e14b623d5dc0051",
   "lastOpenFiles": [
-    "React에서의 input 태그 사용법.md",
     "함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관.md",
+    "React에서의 input 태그 사용법.md",
     "Pure Function(순수 함수).md",
     "React 구조 디자인 매뉴얼.md",
     "UseState().md",
