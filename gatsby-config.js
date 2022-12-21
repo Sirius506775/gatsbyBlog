@@ -15,7 +15,7 @@ module.exports = {
         summary: `who lives and works in South Korea.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://sirius506775.github.io/`,
+    siteUrl: `https://sirius.gatsby.io/`,
     social: {
       github: `sirius506775`,
     },

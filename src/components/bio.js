@@ -47,7 +47,8 @@ const Bio = () => {
           Hello I'm <strong>{author.name}</strong> {author?.summary || null}
           {` `}
           <br/>
-          <a href={`https://github.com/${social?.github || ``}`}>
+          {/* <a href={`https://github.com/${social?.github || ``}`}> */}
+          <a href={`https://github.com/Sirius506775`}>
             You can check my activity on GitHub
           </a>
         </p>
