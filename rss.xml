@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://sirius506775.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Dec 2022 07:41:15 GMT</lastBuildDate><item><title><![CDATA[함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관]]></title><description><![CDATA[- let보다는 가급적 const를 사용 함수형 프로그래밍의 시작은 불변성 유지이다.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://sirius506775.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 03 Jan 2023 17:14:10 GMT</lastBuildDate><item><title><![CDATA[Connection Pool( feat. HikariCP test)]]></title><description><![CDATA[Connection Pool( feat. HikariCP test) 대규모의 사용자가 DB연결을 반복하는 플랫폼을 실행하는 경우에는 Database와 connection…]]></description><link>https://sirius506775.github.io/Connection Pool( feat. HikariCP test)/</link><guid isPermaLink="false">https://sirius506775.github.io/Connection Pool( feat. HikariCP test)/</guid><pubDate>Wed, 04 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Connection Pool( feat. HikariCP test)&lt;/h1&gt;
+&lt;p&gt;대규모의 사용자가 DB연결을 반복하는 플랫폼을 실행하는 경우에는 Database와 connection을 생성하는 과정 자체가 비용이 많이 들고, 시간이 많이 걸리기 때문에 성능에 영향을 줄 수  있다. 때문에 우리는 성능 향상을 위한 관리가 필요한데 이때 사용할 수 있는 것이 바로 Connection Pool Framework이다.&lt;/p&gt;
+&lt;h2&gt;JDBC Connection pooling frameworks&lt;/h2&gt;
+&lt;p&gt;기업용으로 사용할 수 있는 여러 Connection Pool Framework가 존재하지만 이것은 어플리케이션에 어떤 프레임워크를 사용해야하는지에 대한 혼란을 만들기도 한다. 어떤 Connection Pool이 서비스에 가장 적합한지 파악하는데 많은 시간을 투자하고 싶지 않다면 가장 추천하는 프레임워크는 HikariCP이다.&lt;/p&gt;
+&lt;p&gt;C3P0, Apache DBCP, BoneCp, Vibur 등과 같이 선택할 수 있는 프레임워크가 많이 있지만 가장 인기 있는 선택은 &lt;strong&gt;Tomcat JDBC&lt;/strong&gt; 및 &lt;strong&gt;HikariCP이다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20230103172414.png]]
+JMH Microbench results : source &lt;a href=&quot;https://github.com/brettwooldridge/HikariCP&quot;&gt;HikariCP&lt;/a&gt;
+위 벤치마크 결과 상으로도 CP 프레임워크 시장에서  HikariCP는 압도적으로 점유하고 있으며, Spring boot 2.0부터는 default JDBC connection pool을 HikariCP로 사용 중이기도 하다.&lt;/p&gt;
+&lt;h2&gt;Connection Pool Process&lt;/h2&gt;
+&lt;p&gt;![[Pasted image 20230103170933.png]]
+커넥션 풀은 정해진 수량의 connection 객체들을 pool에 담아놓고 getConnection() 요청이 들어오면 Thread가 connection을 요청하여 HikariCP가 pool 내에 있는 connection과 연결해준다. 애플리케이션이 시작될 때마다 커넥션 풀이 데이터베이스와 함께 생성된다.&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20230103172351.png]]&lt;/p&gt;
+&lt;p&gt;Connection pool은 connection 객체를 pool 내에서 미리 준비하여 연결을 유지하고 몇 번이고 재사용할 수 있게함으로써 어플리케이션의 성능 저하를 막을 수 있다.&lt;/p&gt;
+&lt;h3&gt;Dependency&lt;/h3&gt;
+&lt;p&gt;Spring에서 &lt;a href=&quot;https://mvnrepository.com/artifact/com.zaxxer/HikariCP&quot;&gt;HikariCP&lt;/a&gt; 사용 시에는 dependencies에 종속성 추가를 해야한다.
+gradle 설정 시 예시는는 아래와 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// https://mvnrepository.com/artifact/com.zaxxer/HikariCP&lt;/span&gt;
+implementation group&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;com&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;zaxxer&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &apos;&lt;span class=&quot;token class-name&quot;&gt;HikariCP&lt;/span&gt;&apos;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; version&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token char&quot;&gt;&apos;5.0.1&apos;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;TestCode&lt;/h2&gt;
+&lt;p&gt;Spring에서 jdbc 드라이버와 HikariCP 종속성을 추가했다면, 올바른 작동 확인을 위한 테스트를 진행한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token annotation punctuation&quot;&gt;@Test&lt;/span&gt;  
+&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;testHikariCP&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; 
+&lt;span class=&quot;token comment&quot;&gt;//Connection 생성을 위한 HikariCP 테스트  &lt;/span&gt;
+  
+    &lt;span class=&quot;token class-name&quot;&gt;HikariConfig&lt;/span&gt; config &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HikariConfig&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+    &lt;span class=&quot;token comment&quot;&gt;//HikariConfig 타입의 객체를 생성한다.(CP를 생성하는데 필요한 정보를 가지고 있음)  &lt;/span&gt;
+    config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setDriverClassName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;org.mariadb.jdbc.Driver&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setJdbcUrl&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;jdbc:mariadb://localhost:3306/testdb&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setUsername&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;testUser&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setPassword&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;1111&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addDataSourceProperty&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;cachePrepStmts&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addDataSourceProperty&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;prepStmtCacheSize&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;250&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+    config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addDataSourceProperty&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;prepStmtCacheSqlLimit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;2048&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+  
+    &lt;span class=&quot;token class-name&quot;&gt;HikariDataSource&lt;/span&gt; ds &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;HikariDataSource&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+    &lt;span class=&quot;token comment&quot;&gt;//HikariDataSource 객체를 생성해서  &lt;/span&gt;
+    &lt;span class=&quot;token class-name&quot;&gt;Connection&lt;/span&gt; connection &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; ds&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getConnection&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
+    &lt;span class=&quot;token comment&quot;&gt;// getConnection()으로 Connection 객체를 얻어서 사용한다.  &lt;/span&gt;
+  
+    &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;connection&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+  
+    connection&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;  
+	&lt;span class=&quot;token comment&quot;&gt;//JDBC 프로그래밍에서 가장 중요한 것은 Connection은 반드시 close() 해야한다.&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;테스트 코드를 실행하면 출력 결과에서 HikariCP를 통해 얻어온 Connection을 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;![[Pasted image 20230103165220.png]]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@ 뒤의 값은 다를 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;참고문헌&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javarevisited/choosing-the-right-jdbc-connection-pool-c9ef90588d55&quot;&gt;https://medium.com/javarevisited/choosing-the-right-jdbc-connection-pool-c9ef90588d55&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.prdNo=355020973&amp;#x26;gclid=CjwKCAiAwc-dBhA7EiwAxPRylBVoaskxg2RSgHN2w9Hqqi8gA8RiQypg2QoQHG4JsreiQURisLSpoBoCZM8QAvD_BwE&quot;&gt;https://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.prdNo=355020973&amp;#x26;gclid=CjwKCAiAwc-dBhA7EiwAxPRylBVoaskxg2RSgHN2w9Hqqi8gA8RiQypg2QoQHG4JsreiQURisLSpoBoCZM8QAvD_BwE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React 구조 디자인 매뉴얼]]></title><description><![CDATA[react는 Dom이 아닌 JavaScript…]]></description><link>https://sirius506775.github.io/React 구조 디자인 매뉴얼/</link><guid isPermaLink="false">https://sirius506775.github.io/React 구조 디자인 매뉴얼/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;react는 Dom이 아닌 JavaScript를 중심으로 생각한다.&lt;/h2&gt;
+&lt;p&gt;=&gt; 이 패러다임을 받아들여야한다.&lt;/p&gt;
+&lt;h5&gt;더 효과적인 컴포넌트를 구성하는 방법&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;아토믹 디자인은 기획 설계 시 적용하고, 실제 구현단계에서는 적용하기 어렵다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;때문에 구현 단계에서는 반대로 위에서 부터 아래로 뿌려주는 형태로 개발한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;컴포넌트를 외부로 많이 뺀다고 해서 재사용성이 좋지 않았다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;이후에는 모듈이라는 단위로 빼기 시작한다.&lt;/p&gt;
+&lt;h5&gt;설계 원칙&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;확장성과 재사용성 있는 코드&lt;/li&gt;
+&lt;li&gt;topic에 따른 코드 분리와 단일 책임을 가지는 컴포넌트를 만들어야함&lt;/li&gt;
+&lt;li&gt;외부에 제어를 위임시키는것을 고려하자.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5&gt;리액트에서 배열 선언하는 2가지 방법&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;컴포넌트 안에 배열을 선언하는 방법&lt;/li&gt;
+&lt;li&gt;컴포넌트 바깥에 배열을 선언하는 방법&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;방법을 선택하는 기준
+&lt;ul&gt;
+&lt;li&gt;컴포넌트 안에 있는 변수나 상수를 써야하는 경우는 배열을 안쪽에 선언하는 것이 좋다.
+( = 클로저)&lt;/li&gt;
+&lt;li&gt;하지만 독립적이고 고정적인 데이터는 컴포넌트 바깥에 선언하는 것이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;리액트의 컴포넌트가 언제 다시 뿌려지는가&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;컴포넌트 안에 있는 state(상태)가 변경되었을 때&lt;/li&gt;
+&lt;li&gt;컴포넌트가 여러 개인 구조상에서 상위 컴포넌트가 변경되어서 re-rendering이 되면 하위 컴포넌트들도 리렌더링을 한다.&lt;/li&gt;
+&lt;li&gt;props가 변경이 되었을 때(내가 변수에 값을 바꾸는 것이 아니다 xxx )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;우리는 효율적인 재사용과 안정적인 컴포넌트를 만들기 위해 Side Effect가 존재하지 않는 컴포넌트로 만들 필요가 있다. =&gt; 순수 컴포넌트 지향&lt;/p&gt;</content:encoded></item><item><title><![CDATA[함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관]]></title><description><![CDATA[- let보다는 가급적 const를 사용 함수형 프로그래밍의 시작은 불변성 유지이다.
 let사용을 줄이고 const로 개발하는 습관을 권장한다.
 수정된 값이 필요할 때에는 새로운 변수를 만드는 것이 용이하다. Do Not This: Do This…]]></description><link>https://sirius506775.github.io/함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관/</link><guid isPermaLink="false">https://sirius506775.github.io/함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;- let보다는 가급적 const를 사용&lt;/h4&gt;
 &lt;p&gt;함수형 프로그래밍의 시작은 불변성 유지이다.
@@ -47,82 +138,7 @@ foo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&
 &lt;p&gt;=&gt;&gt;&gt;&gt;&gt;&lt;/p&gt;
 &lt;p&gt;** 본질을 잊지말자 **&lt;/p&gt;
 &lt;p&gt;우리가 함수형 프로그래밍을 해야 하는 이유는 &lt;strong&gt;깔끔하고 예측가능하며 테스트 하기 쉽고 안전한 코드&lt;/strong&gt;를 만들기 위해서이며&lt;br&gt;
-javascript가 태생이 &lt;strong&gt;완전한 객체지향도 완전한 함수형도 아닌 밸런스를 가지고 있는 언어&lt;/strong&gt;이기 때문이다. !!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Pure Function]]></title><description><![CDATA[Pure Function(순수함수 <-> Impure Function) 순수함수의 조건 동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x) 함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x) 1-…]]></description><link>https://sirius506775.github.io/Pure Function(순수 함수)/</link><guid isPermaLink="false">https://sirius506775.github.io/Pure Function(순수 함수)/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Pure Function(순수함수 &amp;#x3C;-&gt; Impure Function)&lt;/p&gt;
-&lt;p&gt;순수함수의 조건&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x)&lt;/li&gt;
-&lt;li&gt;함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1-1. 함수의 인자가 아닌 외부 변수를 사용하지 않아야 합니다. (상수는 OK)&lt;br&gt;
-1-2. 함수 내부에서 Math.random()이나 file I/O등 호출때마다 달라지는 값이 없어야 합니다.&lt;br&gt;
-2-1. 외부 변수의 값을 수정하지 않아야 합니다.&lt;br&gt;
-2-2. 인자로 넘어온 Object나 Array, Date와 같은 값들의 필드를 내부에서 변경하지 않아야 합니다.&lt;br&gt;
-2-2. 콘솔, 네트워크, 기타 DOM API등을 사용하지 않아야 합니다.&lt;br&gt;
-2-3. try ~ catch등 같은 에러 처리 로직을 사용하지 않아야 한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;예측 가능&lt;/strong&gt;: 동일한 입력에 대해 예측 가능한 output을 생성한다.&lt;br&gt;
-&lt;strong&gt;가독성&lt;/strong&gt;: 독립된 실행 단위를 가지므로 누구나 그 목적을 완전히 이해할 수 있다.&lt;br&gt;
-&lt;strong&gt;재사용 가능&lt;/strong&gt;: 함수와 호출자의 동작을 변경하지 않고 코드의 여러 위치에서 함수를 재사용할 수 있다.&lt;br&gt;
-테스트 가능**: 독립적인 단위로 테스트 가능하다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;=&gt; Pure function은 항상 같은 value를 return 하기 때문에 테스트하기 용이하다.&lt;/p&gt;
-&lt;p&gt;Pure Function always return same values.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;My Name is &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;name&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token function&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Heon&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// returns &apos;My Name is Heon&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;``
-&lt;strong&gt;순수함수 + 순수함수 = 순수함수&lt;/strong&gt; 가 되므로 순수함수로 조립된 최종값만 부수효과가 있는 함수를 통해 처리하고, 다시 그 결과를 순수함수를 통해 조립을 하는 방식으로 개발을 하면 우리 목적을 달성할 수 있게 된다.
-3&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h2&gt;함수형 프로그래밍의 개념도&lt;/h2&gt;
-&lt;p&gt;Input =&gt; &lt;strong&gt;(순수 함수 =&gt; 순수 함수 =&gt; 순수 함수 =&gt; 순수 함수)&lt;/strong&gt; =&gt; 부수 효과 =&gt; Output1&lt;/p&gt;
-&lt;p&gt;Output1 =&gt; Input =&gt; &lt;strong&gt;(순수 함수 =&gt; 순수 함수)&lt;/strong&gt; =&gt; 부수 효과 =&gt; Output2&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;그래서 이렇게 순수함수를 통해 데이터가 지나가는 경우에는 외부에 영향을 주지 않기 때문에 무한한 조립의 가지수를 다 테스트하지 않고 각 함수만 잘 동작한다면 저 구간은 문제 없을 거라는 것을 확신할 수 있게 됩니다. 이렇게 &lt;strong&gt;값이 변하지 않는 상태를 유지하는 것을 불변성&lt;/strong&gt;(Immutablilty)이라고 합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React 구조 디자인 매뉴얼]]></title><description><![CDATA[react는 Dom이 아닌 JavaScript…]]></description><link>https://sirius506775.github.io/React 구조 디자인 매뉴얼/</link><guid isPermaLink="false">https://sirius506775.github.io/React 구조 디자인 매뉴얼/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;react는 Dom이 아닌 JavaScript를 중심으로 생각한다.&lt;/h2&gt;
-&lt;p&gt;=&gt; 이 패러다임을 받아들여야한다.&lt;/p&gt;
-&lt;h5&gt;더 효과적인 컴포넌트를 구성하는 방법&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;아토믹 디자인은 기획 설계 시 적용하고, 실제 구현단계에서는 적용하기 어렵다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;때문에 구현 단계에서는 반대로 위에서 부터 아래로 뿌려주는 형태로 개발한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;컴포넌트를 외부로 많이 뺀다고 해서 재사용성이 좋지 않았다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;이후에는 모듈이라는 단위로 빼기 시작한다.&lt;/p&gt;
-&lt;h5&gt;설계 원칙&lt;/h5&gt;
-&lt;ol&gt;
-&lt;li&gt;확장성과 재사용성 있는 코드&lt;/li&gt;
-&lt;li&gt;topic에 따른 코드 분리와 단일 책임을 가지는 컴포넌트를 만들어야함&lt;/li&gt;
-&lt;li&gt;외부에 제어를 위임시키는것을 고려하자.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h5&gt;리액트에서 배열 선언하는 2가지 방법&lt;/h5&gt;
-&lt;ol&gt;
-&lt;li&gt;컴포넌트 안에 배열을 선언하는 방법&lt;/li&gt;
-&lt;li&gt;컴포넌트 바깥에 배열을 선언하는 방법&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;방법을 선택하는 기준
-&lt;ul&gt;
-&lt;li&gt;컴포넌트 안에 있는 변수나 상수를 써야하는 경우는 배열을 안쪽에 선언하는 것이 좋다.
-( = 클로저)&lt;/li&gt;
-&lt;li&gt;하지만 독립적이고 고정적인 데이터는 컴포넌트 바깥에 선언하는 것이 좋다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5&gt;리액트의 컴포넌트가 언제 다시 뿌려지는가&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;컴포넌트 안에 있는 state(상태)가 변경되었을 때&lt;/li&gt;
-&lt;li&gt;컴포넌트가 여러 개인 구조상에서 상위 컴포넌트가 변경되어서 re-rendering이 되면 하위 컴포넌트들도 리렌더링을 한다.&lt;/li&gt;
-&lt;li&gt;props가 변경이 되었을 때(내가 변수에 값을 바꾸는 것이 아니다 xxx )&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;우리는 효율적인 재사용과 안정적인 컴포넌트를 만들기 위해 Side Effect가 존재하지 않는 컴포넌트로 만들 필요가 있다. =&gt; 순수 컴포넌트 지향&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React에서의 input 태그 사용법]]></title><description><![CDATA[React에서 input태그를 사용하는 방법 input태그는 사용자가 입력을 해도 컴포넌트가 변하지 않습니다. re-rendering이 일어나지 않는다는 말입니다. 1. useRef를 사용하는 방법 (권장하지 않음) id를 사용하지 않고 대신 ref…]]></description><link>https://sirius506775.github.io/React에서의 input 태그 사용법/</link><guid isPermaLink="false">https://sirius506775.github.io/React에서의 input 태그 사용법/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h5&gt;React에서 input태그를 사용하는 방법&lt;/h5&gt;
+javascript가 태생이 &lt;strong&gt;완전한 객체지향도 완전한 함수형도 아닌 밸런스를 가지고 있는 언어&lt;/strong&gt;이기 때문이다. !!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React에서의 input 태그 사용법]]></title><description><![CDATA[React에서 input태그를 사용하는 방법 input태그는 사용자가 입력을 해도 컴포넌트가 변하지 않습니다. re-rendering이 일어나지 않는다는 말입니다. 1. useRef를 사용하는 방법 (권장하지 않음) id를 사용하지 않고 대신 ref…]]></description><link>https://sirius506775.github.io/React에서의 input 태그 사용법/</link><guid isPermaLink="false">https://sirius506775.github.io/React에서의 input 태그 사용법/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h5&gt;React에서 input태그를 사용하는 방법&lt;/h5&gt;
 &lt;ul&gt;
 &lt;li&gt;input태그는 사용자가 입력을 해도 컴포넌트가 변하지 않습니다. re-rendering이 일어나지 않는다는 말입니다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -191,4 +207,42 @@ javascript가 태생이 &lt;strong&gt;완전한 객체지향도 완전한 함�
 &lt;li&gt;컴포넌트의 state가 변경이 되었을 때&lt;/li&gt;
 &lt;li&gt;props가 변경이 되었을 때&lt;/li&gt;
 &lt;li&gt;상위컴포넌트가 변경이 되어서 re-render가 되면, 하위 컴포넌트도 re-render를 한다.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item></channel></rss>
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Pure Function]]></title><description><![CDATA[Pure Function(순수함수 <-> Impure Function) 순수함수의 조건 동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x) 함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x) 1-…]]></description><link>https://sirius506775.github.io/Pure Function(순수 함수)/</link><guid isPermaLink="false">https://sirius506775.github.io/Pure Function(순수 함수)/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Pure Function(순수함수 &amp;#x3C;-&gt; Impure Function)&lt;/p&gt;
+&lt;p&gt;순수함수의 조건&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x)&lt;/li&gt;
+&lt;li&gt;함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1-1. 함수의 인자가 아닌 외부 변수를 사용하지 않아야 합니다. (상수는 OK)&lt;br&gt;
+1-2. 함수 내부에서 Math.random()이나 file I/O등 호출때마다 달라지는 값이 없어야 합니다.&lt;br&gt;
+2-1. 외부 변수의 값을 수정하지 않아야 합니다.&lt;br&gt;
+2-2. 인자로 넘어온 Object나 Array, Date와 같은 값들의 필드를 내부에서 변경하지 않아야 합니다.&lt;br&gt;
+2-2. 콘솔, 네트워크, 기타 DOM API등을 사용하지 않아야 합니다.&lt;br&gt;
+2-3. try ~ catch등 같은 에러 처리 로직을 사용하지 않아야 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;예측 가능&lt;/strong&gt;: 동일한 입력에 대해 예측 가능한 output을 생성한다.&lt;br&gt;
+&lt;strong&gt;가독성&lt;/strong&gt;: 독립된 실행 단위를 가지므로 누구나 그 목적을 완전히 이해할 수 있다.&lt;br&gt;
+&lt;strong&gt;재사용 가능&lt;/strong&gt;: 함수와 호출자의 동작을 변경하지 않고 코드의 여러 위치에서 함수를 재사용할 수 있다.&lt;br&gt;
+테스트 가능**: 독립적인 단위로 테스트 가능하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;=&gt; Pure function은 항상 같은 value를 return 하기 때문에 테스트하기 용이하다.&lt;/p&gt;
+&lt;p&gt;Pure Function always return same values.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;My Name is &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;name&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Heon&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// returns &apos;My Name is Heon&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;``
+&lt;strong&gt;순수함수 + 순수함수 = 순수함수&lt;/strong&gt; 가 되므로 순수함수로 조립된 최종값만 부수효과가 있는 함수를 통해 처리하고, 다시 그 결과를 순수함수를 통해 조립을 하는 방식으로 개발을 하면 우리 목적을 달성할 수 있게 된다.
+3&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2&gt;함수형 프로그래밍의 개념도&lt;/h2&gt;
+&lt;p&gt;Input =&gt; &lt;strong&gt;(순수 함수 =&gt; 순수 함수 =&gt; 순수 함수 =&gt; 순수 함수)&lt;/strong&gt; =&gt; 부수 효과 =&gt; Output1&lt;/p&gt;
+&lt;p&gt;Output1 =&gt; Input =&gt; &lt;strong&gt;(순수 함수 =&gt; 순수 함수)&lt;/strong&gt; =&gt; 부수 효과 =&gt; Output2&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그래서 이렇게 순수함수를 통해 데이터가 지나가는 경우에는 외부에 영향을 주지 않기 때문에 무한한 조립의 가지수를 다 테스트하지 않고 각 함수만 잘 동작한다면 저 구간은 문제 없을 거라는 것을 확신할 수 있게 됩니다. 이렇게 &lt;strong&gt;값이 변하지 않는 상태를 유지하는 것을 불변성&lt;/strong&gt;(Immutablilty)이라고 합니다.&lt;/p&gt;</content:encoded></item></channel></rss>
