@@ -12,7 +12,7 @@ module.exports = {
     title: `DoneHeon's Develog`,
     author: {
       name: `DoneHeon Lee`,
-        summary: `마라톤을 사랑하며, 문제 해결과정을 탐구하길 좋아하는 사람  `,
+      summary: `마라톤을 사랑하며, 문제 해결과정을 탐구하길 좋아하는 사람  `,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://sirius506775.github.io/`,
@@ -119,6 +119,13 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/braces_lmg.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `G-EFT2SWR5N2`,
+        head: true,
       },
     },
   ],

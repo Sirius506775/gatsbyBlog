@@ -12,6 +12,7 @@
     "@fontsource/montserrat": "^4.5.13",
     "gatsby": "^5.0.0",
     "gatsby-plugin-feed": "^5.0.0",
+    "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-sharp": "^5.0.0",
