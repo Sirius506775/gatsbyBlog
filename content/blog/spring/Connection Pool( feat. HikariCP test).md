@@ -1,8 +1,10 @@
 ---
 title: Connection Pool( feat. HikariCP test)
 date: "2023-01-04"
-description: Connection pool은 connection 객체를 pool 내에서 미리 준비하여 연결을 유지하고 몇 번이고 재사용할 수 있게함으로써 어플리케이션의 성능 저하를 막을 수 있다.
+description: 대규모의 사용자가 DB연결을 반복하는 플랫폼을 실행하는 경우에는 Database와 connection을 생성하는 과정 자체가 비용이 많이 들고, 시간이 많이 걸리기 때문에 성능에 영향을 줄 수  있다. 때문에 우리는 성능 향상을 위한 관리가 필요한데 이때 사용할 수 있는 것이 바로 Connection Pool Framework이다.
 ---
+
+# Connection Pool( feat. HikariCP test)
 대규모의 사용자가 DB연결을 반복하는 플랫폼을 실행하는 경우에는 Database와 connection을 생성하는 과정 자체가 비용이 많이 들고, 시간이 많이 걸리기 때문에 성능에 영향을 줄 수  있다. 때문에 우리는 성능 향상을 위한 관리가 필요한데 이때 사용할 수 있는 것이 바로 Connection Pool Framework이다.
 
 ## JDBC Connection pooling frameworks
@@ -10,19 +12,18 @@ description: Connection pool은 connection 객체를 pool 내에서 미리 준�
 
 C3P0, Apache DBCP, BoneCp, Vibur 등과 같이 선택할 수 있는 프레임워크가 많이 있지만 가장 인기 있는 선택은 **Tomcat JDBC** 및 **HikariCP이다.**
 
-<div>
-<img alt="result query" src="./images/2023-sql-1.png"/>
-</div>
-![[Pasted image 20230103172414.png]]
+<img alt="result query" src="./images/2023-cp01.png"/>
+
 JMH Microbench results : source [HikariCP](https://github.com/brettwooldridge/HikariCP)
 위 벤치마크 결과 상으로도 CP 프레임워크 시장에서  HikariCP는 압도적으로 점유하고 있으며, Spring boot 2.0부터는 default JDBC connection pool을 HikariCP로 사용 중이기도 하다. 
 
 ## Connection Pool Process
 
-![[Pasted image 20230103170933.png]]
+<img alt="result query" src="./images/2023-cp02.png"/>
+
 커넥션 풀은 정해진 수량의 connection 객체들을 pool에 담아놓고 getConnection() 요청이 들어오면 Thread가 connection을 요청하여 HikariCP가 pool 내에 있는 connection과 연결해준다. 애플리케이션이 시작될 때마다 커넥션 풀이 데이터베이스와 함께 생성된다.
 
-![[Pasted image 20230103172351.png]]
+<img alt="result query" src="./images/2023-cp03.png"/>
 
 Connection pool은 connection 객체를 pool 내에서 미리 준비하여 연결을 유지하고 몇 번이고 재사용할 수 있게함으로써 어플리케이션의 성능 저하를 막을 수 있다. 
 
@@ -66,11 +67,10 @@ public void testHikariCP() throws Exception {
 
 테스트 코드를 실행하면 출력 결과에서 HikariCP를 통해 얻어온 Connection을 확인할 수 있다.
 
-![[Pasted image 20230103165220.png]]
+<img alt="result query" src="./images/2023-cp04.png"/>
 
 >@ 뒤의 값은 다를 수 있다. 
 
 참고문헌
 - https://medium.com/javarevisited/choosing-the-right-jdbc-connection-pool-c9ef90588d55
 - https://book.interpark.com/product/BookDisplay.do?_method=detail&sc.prdNo=355020973&gclid=CjwKCAiAwc-dBhA7EiwAxPRylBVoaskxg2RSgHN2w9Hqqi8gA8RiQypg2QoQHG4JsreiQURisLSpoBoCZM8QAvD_BwE
-
