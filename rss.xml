@@ -1,8 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://sirius506775.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 07 Jan 2023 04:22:40 GMT</lastBuildDate><item><title><![CDATA[VScode 사용 중 스크립트 실행 불가에러 PSSecurityException 보안 오류 해결 방법]]></title><description><![CDATA[이 포스팅은 보안 오류: (") []. PSSecurityException 오류 해결 방법을 제공한다. 문제증상 VScode에서 npm으로 Gatsby…]]></description><link>https://sirius506775.github.io/VScode  사용 중 스크립트 실행 불가에러 PSSecurityException 보안 오류 해결 방법/</link><guid isPermaLink="false">https://sirius506775.github.io/VScode  사용 중 스크립트 실행 불가에러 PSSecurityException 보안 오류 해결 방법/</guid><pubDate>Fri, 06 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 포스팅은 보안 오류: (&quot;) []. PSSecurityException 오류 해결 방법을 제공한다.&lt;/p&gt;
-&lt;hr&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://sirius506775.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 07 Jan 2023 05:03:23 GMT</lastBuildDate><item><title><![CDATA[VScode 사용 중 스크립트 실행 불가에러 PSSecurityException 보안 오류 해결 방법]]></title><description><![CDATA[이 포스팅은 보안 오류: (") []. PSSecurityException 오류 해결 방법을 제공한다. 문제증상 VScode에서 npm으로 Gatsby…]]></description><link>https://sirius506775.github.io/error message/2023-vscode-1/</link><guid isPermaLink="false">https://sirius506775.github.io/error message/2023-vscode-1/</guid><pubDate>Fri, 06 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 포스팅은 보안 오류: (&quot;) []. PSSecurityException 오류 해결 방법을 제공한다.&lt;/p&gt;
 &lt;h2&gt;문제증상&lt;/h2&gt;
 &lt;p&gt;VScode에서 npm으로 Gatsby 설치 후 버젼을 확인하려고 &lt;code class=&quot;language-text&quot;&gt;gatsby -v&lt;/code&gt; 를 실행하니 아래와 같이 스크립트 실행 불가 에러가 발생하였다.
-![[Pasted image 20230106205609.png]]&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/7fd5a9ea788778501149eb870a0d9159/31198/2023-error-1.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 22.151898734177216%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAsUlEQVQY042PSU7DQBREfQwIdPcfDLLbCQQhBoOIMygKiPuf56G2WmHBhsVTlWpTVc2h73ntOt5z5vNuxT5n9suB73XLqb9hNGN048WMt+LN+HBj585U2bqzcefZlOboxlfbcnJjUmUyZRThPgpDSmQR+llTVTlng/zmQ9WmNJQFtylxHSMXIXAVApchzL6wqNl/aDym+cquTi4tXUrne0+qPKqyVuWh+pUIIQRijH/4AeKtcr+j2XKHAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;result query&quot; title=&quot;result query&quot; src=&quot;/static/7fd5a9ea788778501149eb870a0d9159/f058b/2023-error-1.png&quot; srcset=&quot;/static/7fd5a9ea788778501149eb870a0d9159/c26ae/2023-error-1.png 158w,
+/static/7fd5a9ea788778501149eb870a0d9159/6bdcf/2023-error-1.png 315w,
+/static/7fd5a9ea788778501149eb870a0d9159/f058b/2023-error-1.png 630w,
+/static/7fd5a9ea788778501149eb870a0d9159/31198/2023-error-1.png 694w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;해결과정&lt;/h2&gt;
 &lt;p&gt;로그에서 말하는 PSSecurityException에 대해 검색해보니 보안 실행 정책 제한되어있기에 발생하는 오류인 것을 확인했다. 즉, 스크립트 실행 권한이 없다는 뜻이다.
 스크립트를 실행할 수 있게 허용하려면 PowerShell 실행 정책을 Restricted에서 RemoteSigned 또는 Unrestricted로 설정해야한다.&lt;/p&gt;
@@ -13,36 +20,73 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;![[Pasted image 20230106211430.png]]&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/6fcec11a8b8767c7fc60dfbfe6876dfb/ef3e1/2023-error-2.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 44.93670886075949%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABnElEQVQoz22S226jMBRF8/8P8ycjzUdUqvIyodNCAk3AxsBQ7gSSSTDpGtlJo87lwdqWL8tnb5+FjCVPzneCICDLMpIkQSlFHMd3raqK0+nE+Xxmmia0nni/aKvnabJrZpj9RSwSgjAjTRPSNCOKIoqiYL/f0/c9XdfZudaaSWsL6saZL99KHt0WuDBNmnmeLXQhdgmvsqHrGpqmoSxLCzgejxwOB8ZxZBiGWxUa3mfaQfP1oUIVh3+BUgqkCK3dNE3vtj+GsW0eMofNpbquyfOfDH1FVRa8FYW1egcGIubR8wk2G1zPY7Va4Xmezc4AhRAWoueZ2di+5XU8/rrmaTPV10gMMBSKH17E9jXA931c12W9XiOlJE0Sq6bC83iwEVwuF3vZVPQB+gPoi5iH5wDv5RnHeWK5XOI4Dhvft3YNsK4bymokz/Mr/Gbxb6D95V0UsXpxiYVARBHRbnfVMCRRiiSOLXBb9aRZZjM2EUyf2sW0zx2YRRHhes2bUqjtFhkEVkulKJQil5K2rknbnqquadvWdoL5+f9V+Bu3w6Tt4IITSwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;result query&quot; title=&quot;result query&quot; src=&quot;/static/6fcec11a8b8767c7fc60dfbfe6876dfb/f058b/2023-error-2.png&quot; srcset=&quot;/static/6fcec11a8b8767c7fc60dfbfe6876dfb/c26ae/2023-error-2.png 158w,
+/static/6fcec11a8b8767c7fc60dfbfe6876dfb/6bdcf/2023-error-2.png 315w,
+/static/6fcec11a8b8767c7fc60dfbfe6876dfb/f058b/2023-error-2.png 630w,
+/static/6fcec11a8b8767c7fc60dfbfe6876dfb/ef3e1/2023-error-2.png 759w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;콘솔 창에 &lt;code class=&quot;language-text&quot;&gt;Get-ExecutionPolicy -List&lt;/code&gt;를 입력하면 현재 세션에 영향을 주는 모든 실행 정책을 가져와서 우선 순위로 표시한다. 출력 결과를 보니 현재 실행 정책이 &lt;code class=&quot;language-text&quot;&gt;Restricted&lt;/code&gt;로 제한되어 있음을 알 수 있다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;![[Pasted image 20230106212629.png]]&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 239px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/26f8c648040a7de9a7d62a914d1eb701/4a279/2023-error-3.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABdklEQVQoz2WSW6+CQAyE980A4gVFxRsIAuIVQ+D//7OefE1qjOdhKd1OZzuz68bjsdgKgkCm06nM53MJw1D3yFmGoUZOfblcymw2k8lk8sG7b0LP82S/38vz+ZTH4yH3+13yPJfr9ar/RVHoPntN00jf91JVlWy3W42bzUac7/tiazQa6enH41EOh4PsdjtZLBZ6CHmapvq/Xq+VZLVaKQk5daZ3URRpgZgkiTYYCEnIQZYtmjgQQiILLL1xHIt7vV5S17Wcz2cZhuEjLcsylcHEWIG/qCB2XafS3++32kGv2aOS27ZVAL5cLhctcPLpdFJCSOzSMN+I8Nrw9DKEA4RkPABEpABZWZb/CIkQQcAQqIMQYjx2+IIkvIIMIoC3200lU/+dEJuMEAw9DKOEfGhGIkWTQgPeYMn3OyU3QiKTQUiuhNwqCaPzriCz6dj7lWwHgsEaVNHPpUDsbDJuliJAPOENEnkmNiWEDMBBNOO94fCbp/QHFFkjZzeod1sAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;result query&quot; title=&quot;result query&quot; src=&quot;/static/26f8c648040a7de9a7d62a914d1eb701/4a279/2023-error-3.png&quot; srcset=&quot;/static/26f8c648040a7de9a7d62a914d1eb701/c26ae/2023-error-3.png 158w,
+/static/26f8c648040a7de9a7d62a914d1eb701/4a279/2023-error-3.png 239w&quot; sizes=&quot;(max-width: 239px) 100vw, 239px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;ol start=&quot;3&quot;&gt;
 &lt;li&gt;스크립트를 실행할 수 있게 허용하려면 실행 정책을 Restricted에서 RemoteSigned 또는 Unrestricted로 설정해야 한다. &lt;code class=&quot;language-text&quot;&gt;Set-ExecutionPolicy RemoteSigned&lt;/code&gt;을 입력해서 현재 실행 정책을 &lt;code class=&quot;language-text&quot;&gt;RemoteSigned&lt;/code&gt;로 변경하자.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;![[Pasted image 20230106205252.png]]&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/463d264ab375d54abcfdd3d0df1f63f3/34e70/2023-error-4.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 24.050632911392405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAr0lEQVQY04WQsRKEIAxEqZ0DJAQEdbTx/39xbzaKV17xBkKSzQbXe8e2bVBV5CxQTdA8Q3WGSELO2fDeY5qmv7jrunAcB5ZlQSnFmntvqLVa3HoHh45ca80Y9YRmbkMZ7jzP9/F2o0/zfVKYUIQ1FCLrulr96LXhrcHt+24Ofy5mlCKoRWzlMZ2IyDuE95SSiVOYJ2PXn5WGA+8/iDEgBm//FkJ4YRxjNHgfMXPj7QuIEnpJfOCMRAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;result query&quot; title=&quot;result query&quot; src=&quot;/static/463d264ab375d54abcfdd3d0df1f63f3/f058b/2023-error-4.png&quot; srcset=&quot;/static/463d264ab375d54abcfdd3d0df1f63f3/c26ae/2023-error-4.png 158w,
+/static/463d264ab375d54abcfdd3d0df1f63f3/6bdcf/2023-error-4.png 315w,
+/static/463d264ab375d54abcfdd3d0df1f63f3/f058b/2023-error-4.png 630w,
+/static/463d264ab375d54abcfdd3d0df1f63f3/40601/2023-error-4.png 945w,
+/static/463d264ab375d54abcfdd3d0df1f63f3/34e70/2023-error-4.png 1053w&quot; sizes=&quot;(max-width: 630px) 100vw, 630px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;ol start=&quot;4&quot;&gt;
 &lt;li&gt;변경 상태를 확인하기 위해 &lt;code class=&quot;language-text&quot;&gt;GET-ExecutionPolicy&lt;/code&gt; 명령으로 현재 보안 실행 정책을 확인해보면 정상적으로 변경되어 있는 것을 확인할 수 있다.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;![[Pasted image 20230106210313.png]]&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 346px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/7ac8b0589753bb290bf680e2bd5668f6/8f77f/2023-error-5.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 10.759493670886075%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAdElEQVQI1z2MUQrDIBQEcwH1hSANxFZaKxpbDd7/cFNioB/L7M7HTvu+Y63lOA5qrbTW6L2P7r0npUQphXVd+RRPfDtyeoyEsI1dv0/u7kZ4bUznQQgB5xw5Z2KMKKWY5xkRGTxzOYPWF5dFEDGIaIzRf/8Dg2s1b1TEjCQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;result query&quot; title=&quot;result query&quot; src=&quot;/static/7ac8b0589753bb290bf680e2bd5668f6/8f77f/2023-error-5.png&quot; srcset=&quot;/static/7ac8b0589753bb290bf680e2bd5668f6/c26ae/2023-error-5.png 158w,
+/static/7ac8b0589753bb290bf680e2bd5668f6/6bdcf/2023-error-5.png 315w,
+/static/7ac8b0589753bb290bf680e2bd5668f6/8f77f/2023-error-5.png 346w&quot; sizes=&quot;(max-width: 346px) 100vw, 346px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
 &lt;p&gt;이제 다시 VScode로 돌아가서 스크립트를 실행하면 정상적으로 작동되는 것을 확인할 수 있다.
-![[Pasted image 20230106205235.png]]&lt;/p&gt;
+&lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 288px; &quot;&gt;
+      &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/1bc9eaf90e7179c3401877562162e1d1/477c9/2023-error-6.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 17.72151898734177%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA2UlEQVQY032NQW6DMAAE+QbY4ChySghBKQGcBBuCkVrIqeqx/f8/porbcw+rkVaj3Wif77n1lmG8M/kZ03Usy8owjHg/sz5WZu9x1mKd5X1Z8P6N623H1/eOx0Pz+bFF6y15nhMNzmG6ButGjDE0bcM0TVg7sKxrOGjaltv1Qtd2VFXFsawoCkXbbjgUitNJoVSGUhsi5xzn+kR5fEp7XuuaizHU54a+79Fas3vJKctDGJNSkCQJQqTEcRqYJClp+psojmOEEEGUUgY5dH98dqmUgUIKsiz7Nz+ZA3kuRiTMJgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
+  &lt;img class=&quot;gatsby-resp-image-image&quot; alt=&quot;result query&quot; title=&quot;result query&quot; src=&quot;/static/1bc9eaf90e7179c3401877562162e1d1/477c9/2023-error-6.png&quot; srcset=&quot;/static/1bc9eaf90e7179c3401877562162e1d1/c26ae/2023-error-6.png 158w,
+/static/1bc9eaf90e7179c3401877562162e1d1/477c9/2023-error-6.png 288w&quot; sizes=&quot;(max-width: 288px) 100vw, 288px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h4&gt;참고 자료&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.vmware.com/kr/vRealize-Automation/7.6/com.vmware.vra.iaas.blade.doc/GUID-C86DCF49-F23B-4B9C-9FD5-95524FB74F01.html&quot;&gt;https://docs.vmware.com/kr/vRealize-Automation/7.6/com.vmware.vra.iaas.blade.doc/GUID-C86DCF49-F23B-4B9C-9FD5-95524FB74F01.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/ko-kr/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3&quot;&gt;https://learn.microsoft.com/ko-kr/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[MySQL 언어 설정 에러(UTF-8)]]></title><description><![CDATA[문제 세션을 통한 로그인 기능을 구현 하던 중에 insert 쿼리 실행 시 아래와 같은 오류가 발생했다. 추론 컬럼에 맞지 않는 데이터라는데  webdbtbl_membermname 라는 걸 보니 해당 에러는 mname…]]></description><link>https://sirius506775.github.io/SQL/2023-sql-1/</link><guid isPermaLink="false">https://sirius506775.github.io/SQL/2023-sql-1/</guid><pubDate>Fri, 06 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;문제&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[MySQL 언어 설정 에러(UTF-8)]]></title><description><![CDATA[문제 세션을 통한 로그인 기능을 구현 하던 중에 insert 쿼리 실행 시 아래와 같은 오류가 발생했다. 추론 컬럼에 맞지 않는 데이터라는데 webdbtbl_membermname 라는 걸 보니 해당 에러는 mname…]]></description><link>https://sirius506775.github.io/SQL/2023-sql-1/</link><guid isPermaLink="false">https://sirius506775.github.io/SQL/2023-sql-1/</guid><pubDate>Fri, 06 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;문제&lt;/h2&gt;
 &lt;p&gt;세션을 통한 로그인 기능을 구현 하던 중에 insert 쿼리 실행 시 아래와 같은 오류가 발생했다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;22007&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1366&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;conn&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;76&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; Incorrect string &lt;span class=&quot;token keyword&quot;&gt;value&lt;/span&gt;: &lt;span class=&quot;token string&quot;&gt;&apos;\xEC\x82\xAC\xEC\x9A\xA9...&apos;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;token identifier&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;`&lt;/span&gt;webdb&lt;span class=&quot;token punctuation&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token identifier&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;`&lt;/span&gt;tbl_member&lt;span class=&quot;token punctuation&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token identifier&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;`&lt;/span&gt;mname&lt;span class=&quot;token punctuation&quot;&gt;`&lt;/span&gt;&lt;/span&gt; at &lt;span class=&quot;token keyword&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;추론&lt;/h2&gt;
-&lt;p&gt;컬럼에 맞지 않는 데이터라는데  &lt;code class=&quot;language-text&quot;&gt;for column &lt;/code&gt;webdb&lt;code class=&quot;language-text&quot;&gt;.&lt;/code&gt;tbl_member&lt;code class=&quot;language-text&quot;&gt;.&lt;/code&gt;mname&lt;code class=&quot;language-text&quot;&gt; at row 1&lt;/code&gt; 라는 걸 보니 해당 에러는 mname의 값이 문제가 되는 것 같다.&lt;/p&gt;
+&lt;p&gt;컬럼에 맞지 않는 데이터라는데 &lt;code class=&quot;language-text&quot;&gt;for column &lt;/code&gt;webdb&lt;code class=&quot;language-text&quot;&gt;.&lt;/code&gt;tbl_member&lt;code class=&quot;language-text&quot;&gt;.&lt;/code&gt;mname&lt;code class=&quot;language-text&quot;&gt; at row 1&lt;/code&gt; 라는 걸 보니 해당 에러는 mname의 값이 문제가 되는 것 같다.&lt;/p&gt;
 &lt;p&gt;mname에 한글로 된 문자열이 들어간&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;insert&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;into&lt;/span&gt; tbl_member &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;mid&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; mpw&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; mname&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;user00&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;1111&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;사용자0&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;해결방법&lt;/h2&gt;
 &lt;p&gt;이 에러는 MySQL 언어 설정이 UTF-8이 되어 있지 않아서 생기는 문제이다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;TABLE&lt;/span&gt; tbl_member &lt;span class=&quot;token keyword&quot;&gt;CONVERT&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;TO&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;CHARSET&lt;/span&gt; utf8&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;쿼리 탭에 해당 테이블의 기본 설정을 UTF-8로 바꾸어주고 다시 쿼리를 날리면 정상적으로 데이터가 테이블에 insert 되는 것을 확인할 수 있다.&lt;/p&gt;
+&lt;div&gt;
 &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 498px; &quot;&gt;
       &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/c17051197346d8a709bc0e7402d4c8e5/79e1b/2023-sql-1.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 29.11392405063291%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABEElEQVQY01WO4W6CQBCEeZvqAZrAHdztLoiAoEZtbGqavv+DTHOrtfbH/NjZmS+TeNng+n3DYT9j3E1gZrRti34YcL19YX88q09E6k/zHu8fn5jmA46nC/phRAgBXdfBe4+EpMHpfEA/9Oj6EdY5OFeBWDAfT9iOE1gaWGvhnEPbbe/+sEM/TghEKMsSde1RFAWSuMhWHj4IZLNFmmVYLpdI0xSVD6p4G2MefobaE0haWFdhsXiDMekzkzAL6kAILAgkCoywPM/hibWcPbyo1Xqt2QgsSquQ319UItLcgSTgZvMs5/kKgRuF/gOu1gjEmo0LFfjyT1gExA2k7VRaNkaBcUVc8wc0d+Bj4RP4svAH9yDEnaua4XoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;&gt;&lt;/span&gt;
@@ -50,13 +94,17 @@
 /static/c17051197346d8a709bc0e7402d4c8e5/6bdcf/2023-sql-1.png 315w,
 /static/c17051197346d8a709bc0e7402d4c8e5/79e1b/2023-sql-1.png 498w&quot; sizes=&quot;(max-width: 498px) 100vw, 498px&quot; style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot;&gt;
   &lt;/a&gt;
-    &lt;/span&gt;</content:encoded></item><item><title><![CDATA[Connection Pool( feat. HikariCP test)]]></title><description><![CDATA[대규모의 사용자가 DB연결을 반복하는 플랫폼을 실행하는 경우에는 Database와 connection…]]></description><link>https://sirius506775.github.io/Connection Pool( feat. HikariCP test)/</link><guid isPermaLink="false">https://sirius506775.github.io/Connection Pool( feat. HikariCP test)/</guid><pubDate>Wed, 04 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;대규모의 사용자가 DB연결을 반복하는 플랫폼을 실행하는 경우에는 Database와 connection을 생성하는 과정 자체가 비용이 많이 들고, 시간이 많이 걸리기 때문에 성능에 영향을 줄 수  있다. 때문에 우리는 성능 향상을 위한 관리가 필요한데 이때 사용할 수 있는 것이 바로 Connection Pool Framework이다.&lt;/p&gt;
+    &lt;/span&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Connection Pool( feat. HikariCP test)]]></title><description><![CDATA[대규모의 사용자가 DB연결을 반복하는 플랫폼을 실행하는 경우에는 Database와 connection…]]></description><link>https://sirius506775.github.io/Connection Pool( feat. HikariCP test)/</link><guid isPermaLink="false">https://sirius506775.github.io/Connection Pool( feat. HikariCP test)/</guid><pubDate>Wed, 04 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;대규모의 사용자가 DB연결을 반복하는 플랫폼을 실행하는 경우에는 Database와 connection을 생성하는 과정 자체가 비용이 많이 들고, 시간이 많이 걸리기 때문에 성능에 영향을 줄 수  있다. 때문에 우리는 성능 향상을 위한 관리가 필요한데 이때 사용할 수 있는 것이 바로 Connection Pool Framework이다.&lt;/p&gt;
 &lt;h2&gt;JDBC Connection pooling frameworks&lt;/h2&gt;
 &lt;p&gt;기업용으로 사용할 수 있는 여러 Connection Pool Framework가 존재하지만 이것은 어플리케이션에 어떤 프레임워크를 사용해야하는지에 대한 혼란을 만들기도 한다. 어떤 Connection Pool이 서비스에 가장 적합한지 파악하는데 많은 시간을 투자하고 싶지 않다면 가장 추천하는 프레임워크는 HikariCP이다.&lt;/p&gt;
 &lt;p&gt;C3P0, Apache DBCP, BoneCp, Vibur 등과 같이 선택할 수 있는 프레임워크가 많이 있지만 가장 인기 있는 선택은 &lt;strong&gt;Tomcat JDBC&lt;/strong&gt; 및 &lt;strong&gt;HikariCP이다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;![[Pasted image 20230103172414.png]]
-JMH Microbench results : source &lt;a href=&quot;https://github.com/brettwooldridge/HikariCP&quot;&gt;HikariCP&lt;/a&gt;
-위 벤치마크 결과 상으로도 CP 프레임워크 시장에서  HikariCP는 압도적으로 점유하고 있으며, Spring boot 2.0부터는 default JDBC connection pool을 HikariCP로 사용 중이기도 하다.&lt;/p&gt;
+&lt;div&gt;
+&lt;img alt=&quot;result query&quot; src=&quot;./images/2023-sql-1.png&quot;/&gt;
+&lt;/div&gt;
+![[Pasted image 20230103172414.png]]
+JMH Microbench results : source [HikariCP](https://github.com/brettwooldridge/HikariCP)
+위 벤치마크 결과 상으로도 CP 프레임워크 시장에서  HikariCP는 압도적으로 점유하고 있으며, Spring boot 2.0부터는 default JDBC connection pool을 HikariCP로 사용 중이기도 하다. 
 &lt;h2&gt;Connection Pool Process&lt;/h2&gt;
 &lt;p&gt;![[Pasted image 20230103170933.png]]
 커넥션 풀은 정해진 수량의 connection 객체들을 pool에 담아놓고 getConnection() 요청이 들어오면 Thread가 connection을 요청하여 HikariCP가 pool 내에 있는 connection과 연결해준다. 애플리케이션이 시작될 때마다 커넥션 풀이 데이터베이스와 함께 생성된다.&lt;/p&gt;
@@ -103,45 +151,7 @@ implementation group&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/javarevisited/choosing-the-right-jdbc-connection-pool-c9ef90588d55&quot;&gt;https://medium.com/javarevisited/choosing-the-right-jdbc-connection-pool-c9ef90588d55&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.prdNo=355020973&amp;#x26;gclid=CjwKCAiAwc-dBhA7EiwAxPRylBVoaskxg2RSgHN2w9Hqqi8gA8RiQypg2QoQHG4JsreiQURisLSpoBoCZM8QAvD_BwE&quot;&gt;https://book.interpark.com/product/BookDisplay.do?_method=detail&amp;#x26;sc.prdNo=355020973&amp;#x26;gclid=CjwKCAiAwc-dBhA7EiwAxPRylBVoaskxg2RSgHN2w9Hqqi8gA8RiQypg2QoQHG4JsreiQURisLSpoBoCZM8QAvD_BwE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Pure Function]]></title><description><![CDATA[Pure Function(순수함수 <-> Impure Function) 순수함수의 조건 동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x) 함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x) 1-…]]></description><link>https://sirius506775.github.io/Pure Function(순수 함수)/</link><guid isPermaLink="false">https://sirius506775.github.io/Pure Function(순수 함수)/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Pure Function(순수함수 &amp;#x3C;-&gt; Impure Function)&lt;/p&gt;
-&lt;p&gt;순수함수의 조건&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;동일한 인자를 넣을 경우 항상 같은 값을 반환해야한다.(외부 상태에 의존 x)&lt;/li&gt;
-&lt;li&gt;함수가 호출되고 나서 아무런 변화가 없어야한다. (외부 상태 변경 x)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1-1. 함수의 인자가 아닌 외부 변수를 사용하지 않아야 합니다. (상수는 OK)&lt;br&gt;
-1-2. 함수 내부에서 Math.random()이나 file I/O등 호출때마다 달라지는 값이 없어야 합니다.&lt;br&gt;
-2-1. 외부 변수의 값을 수정하지 않아야 합니다.&lt;br&gt;
-2-2. 인자로 넘어온 Object나 Array, Date와 같은 값들의 필드를 내부에서 변경하지 않아야 합니다.&lt;br&gt;
-2-2. 콘솔, 네트워크, 기타 DOM API등을 사용하지 않아야 합니다.&lt;br&gt;
-2-3. try ~ catch등 같은 에러 처리 로직을 사용하지 않아야 한다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;예측 가능&lt;/strong&gt;: 동일한 입력에 대해 예측 가능한 output을 생성한다.&lt;br&gt;
-&lt;strong&gt;가독성&lt;/strong&gt;: 독립된 실행 단위를 가지므로 누구나 그 목적을 완전히 이해할 수 있다.&lt;br&gt;
-&lt;strong&gt;재사용 가능&lt;/strong&gt;: 함수와 호출자의 동작을 변경하지 않고 코드의 여러 위치에서 함수를 재사용할 수 있다.&lt;br&gt;
-테스트 가능**: 독립적인 단위로 테스트 가능하다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;=&gt; Pure function은 항상 같은 value를 return 하기 때문에 테스트하기 용이하다.&lt;/p&gt;
-&lt;p&gt;Pure Function always return same values.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;My Name is &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;name&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token function&quot;&gt;myName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Heon&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// returns &apos;My Name is Heon&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;``
-&lt;strong&gt;순수함수 + 순수함수 = 순수함수&lt;/strong&gt; 가 되므로 순수함수로 조립된 최종값만 부수효과가 있는 함수를 통해 처리하고, 다시 그 결과를 순수함수를 통해 조립을 하는 방식으로 개발을 하면 우리 목적을 달성할 수 있게 된다.
-3&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h2&gt;함수형 프로그래밍의 개념도&lt;/h2&gt;
-&lt;p&gt;Input =&gt; &lt;strong&gt;(순수 함수 =&gt; 순수 함수 =&gt; 순수 함수 =&gt; 순수 함수)&lt;/strong&gt; =&gt; 부수 효과 =&gt; Output1&lt;/p&gt;
-&lt;p&gt;Output1 =&gt; Input =&gt; &lt;strong&gt;(순수 함수 =&gt; 순수 함수)&lt;/strong&gt; =&gt; 부수 효과 =&gt; Output2&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;그래서 이렇게 순수함수를 통해 데이터가 지나가는 경우에는 외부에 영향을 주지 않기 때문에 무한한 조립의 가지수를 다 테스트하지 않고 각 함수만 잘 동작한다면 저 구간은 문제 없을 거라는 것을 확신할 수 있게 됩니다. 이렇게 &lt;strong&gt;값이 변하지 않는 상태를 유지하는 것을 불변성&lt;/strong&gt;(Immutablilty)이라고 합니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관]]></title><description><![CDATA[- let보다는 가급적 const를 사용 함수형 프로그래밍의 시작은 불변성 유지이다.
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관]]></title><description><![CDATA[- let보다는 가급적 const를 사용 함수형 프로그래밍의 시작은 불변성 유지이다.
 let사용을 줄이고 const로 개발하는 습관을 권장한다.
 수정된 값이 필요할 때에는 새로운 변수를 만드는 것이 용이하다. Do Not This: Do This…]]></description><link>https://sirius506775.github.io/함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관/</link><guid isPermaLink="false">https://sirius506775.github.io/함수형 프로그래밍 패러다임을 위한 좋은 코딩 습관/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;- let보다는 가급적 const를 사용&lt;/h4&gt;
 &lt;p&gt;함수형 프로그래밍의 시작은 불변성 유지이다.
@@ -227,73 +237,4 @@ javascript가 태생이 &lt;strong&gt;완전한 객체지향도 완전한 함�
 &lt;li&gt;컴포넌트가 여러 개인 구조상에서 상위 컴포넌트가 변경되어서 re-rendering이 되면 하위 컴포넌트들도 리렌더링을 한다.&lt;/li&gt;
 &lt;li&gt;props가 변경이 되었을 때(내가 변수에 값을 바꾸는 것이 아니다 xxx )&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;우리는 효율적인 재사용과 안정적인 컴포넌트를 만들기 위해 Side Effect가 존재하지 않는 컴포넌트로 만들 필요가 있다. =&gt; 순수 컴포넌트 지향&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React에서의 input 태그 사용법]]></title><description><![CDATA[React에서 input태그를 사용하는 방법 input태그는 사용자가 입력을 해도 컴포넌트가 변하지 않습니다. re-rendering이 일어나지 않는다는 말입니다. 1. useRef를 사용하는 방법 (권장하지 않음) id를 사용하지 않고 대신 ref…]]></description><link>https://sirius506775.github.io/react/React에서의 input 태그 사용법/</link><guid isPermaLink="false">https://sirius506775.github.io/react/React에서의 input 태그 사용법/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h5&gt;React에서 input태그를 사용하는 방법&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;input태그는 사용자가 입력을 해도 컴포넌트가 변하지 않습니다. re-rendering이 일어나지 않는다는 말입니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5&gt;1. useRef를 사용하는 방법 (권장하지 않음)&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;id를 사용하지 않고 대신 ref를 사용하는 방법입니다.&lt;/li&gt;
-&lt;li&gt;ref를 만드는 이유는 DOM 요소를 사용해야할 경우에 사용하기 위함입니다. ( 빈도 수는 적음)&lt;/li&gt;
-&lt;li&gt;input 태그는 빈 곳에 입력을 하거나, 이미 있던 내용을 보여주기 위함의 2가지 목적이 있다는 것을 기억해보면 이 방법은 추천하지 않습니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5&gt;2. state를 사용하는 방법&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;value는 re-rendering이 안되기 때문에 일반적으로 input태그를 쓸때는 ref가 아니라 state로 빼라고 말하곤 합니다.&lt;/li&gt;
-&lt;li&gt;사용자가 입력을 하면 그 입력값을 가지고 state를 변경해서 다시 렌더링을 하며 이떄 &lt;code class=&quot;language-text&quot;&gt;onChange&lt;/code&gt; 함수를 사용합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;useState&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
-
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;InputEx2&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; 
-	&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;setText&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; 
-	
-	&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; 
-		&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; 
-			&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;input type&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;text&apos;&lt;/span&gt; value&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; onChange&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setText&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;  
-			&lt;span class=&quot;token comment&quot;&gt;//onChange() method를 사용해서 setText으로 state를 변경할 수 있다&lt;/span&gt;
-			&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; 
-		&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; 
-	
-&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; InputEx2&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;=&gt; 하지만 실제로 외부에서 작업할 때에는 React의 input를 효과적으로 하기위해 만든 수많은 플러그인을 사용한다는 것을 기억하자...!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[UseState()]]></title><description><![CDATA[useState Hook 리액트의 컴포넌트가 re-rendering 하는 조건 중 하나는 컴포넌트 안에 있는 state가 변경되었을 경우입니다. useState는 리액트가 컴포넌트들을 모니터링하기 위해 만들어진 개념입니다. state…]]></description><link>https://sirius506775.github.io/react/UseState()/</link><guid isPermaLink="false">https://sirius506775.github.io/react/UseState()/</guid><pubDate>Wed, 21 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h4&gt;useState Hook&lt;/h4&gt;
-&lt;p&gt;리액트의 컴포넌트가 re-rendering 하는 조건 중 하나는 컴포넌트 안에 있는 state가 변경되었을 경우입니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;useState는 리액트가 컴포넌트들을 모니터링하기 위해 만들어진 개념입니다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;state로 데이터를 만들면 리액트가 모니터링을 할 수 있습니다.&lt;/li&gt;
-&lt;li&gt;리액트는 컴포넌트의 상태가 변경되었음을 알아야하기 때문에 리액트에서는 useState를 사용하여 상태를 관리합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;useState는 배열을 반환 하는 호출가능한 함수이다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;함수 실행 시 컴포넌트에 있는 값을 쓰는 것이 아니라 useState를 통해 가져온 배열을 사용하는 것&lt;/li&gt;
-&lt;li&gt;배열의 첫번째 요소는 초기화된 값이며, 두 번째 값은 초기값을 변경할 수 있는 함수로 구성되어 있습니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;useState 훅은 실제로 react 패키지에 들어있기 때문에 임포트를 해야한다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useState &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;useState()에 전달하는 값은 상태 변수의 디폴트 값이다.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setTitle&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h5&gt;setstate를 검사 하는 작동원리&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;setState가 실행이 되면 React는 자기가 원래 가지고 있던 객체랑 setState로 들어온 객체랑 같은 건지 비교를 하는 작업을 거칩니다. ( 때문에 useState를 남발하는 것은 지양)&lt;/li&gt;
-&lt;li&gt;만약 이 2개가 같다면 re-render를 하지 않아도 된다고 판단하고 skip합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;** change와 change() **&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;change = 변수의 의미&lt;/li&gt;
-&lt;li&gt;change() = 실행한 결과의 의미&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;state를 다루는 진짜 이유는 Re-rendering을 하기 위해서입니다. 다시 컴포넌트를 뿌려주기 위함이 목적입니다.&lt;/p&gt;
-&lt;h5&gt;re-render를 하는 3가지 상황&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;컴포넌트의 state가 변경이 되었을 때&lt;/li&gt;
-&lt;li&gt;props가 변경이 되었을 때&lt;/li&gt;
-&lt;li&gt;상위컴포넌트가 변경이 되어서 re-render가 되면, 하위 컴포넌트도 re-render를 한다.&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;우리는 효율적인 재사용과 안정적인 컴포넌트를 만들기 위해 Side Effect가 존재하지 않는 컴포넌트로 만들 필요가 있다. =&gt; 순수 컴포넌트 지향&lt;/p&gt;</content:encoded></item></channel></rss>
