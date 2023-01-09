@@ -12,6 +12,7 @@
     "@fontsource/montserrat": "^4.5.13",
     "gatsby": "^5.0.0",
     "gatsby-plugin-feed": "^5.0.0",
+    "gatsby-plugin-google-gtag": "^5.3.0",
     "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
@@ -44,7 +45,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby servegatsby serve",
     "clean": "gatsby clean",
     "deploy": "gatsby build && gh-pages -d public -b deploy",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
